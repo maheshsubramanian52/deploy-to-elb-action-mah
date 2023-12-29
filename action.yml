@@ -9,9 +9,11 @@ inputs:
   autoscaling_group_name: # id of input
     description: Autoscaling group to deploy to
     required: true
+    default: maheshstacker-AutoScalingGroup-eP8d1668oMgA
   ssh_key: # id of input
     description: Private SSH key to use to authenticate with the server"
     required: true
+    default: ${{secrets.SSH_PEM}}
 runs:
   using: "docker"
   image: "Dockerfile"
